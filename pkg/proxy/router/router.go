@@ -15,16 +15,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wandoulabs/codis/pkg/utils"
+	"github.com/hmaimi/codis/pkg/utils"
 
-	topo "github.com/wandoulabs/codis/pkg/proxy/router/topology"
+	topo "github.com/hmaimi/codis/pkg/proxy/router/topology"
 
-	"github.com/wandoulabs/codis/pkg/models"
-	"github.com/wandoulabs/codis/pkg/proxy/group"
-	"github.com/wandoulabs/codis/pkg/proxy/parser"
-	"github.com/wandoulabs/codis/pkg/proxy/redispool"
+	"github.com/hmaimi/codis/pkg/models"
+	"github.com/hmaimi/codis/pkg/proxy/group"
+	"github.com/hmaimi/codis/pkg/proxy/parser"
+	"github.com/hmaimi/codis/pkg/proxy/redispool"
 
-	"github.com/wandoulabs/codis/pkg/proxy/cachepool"
+	"github.com/hmaimi/codis/pkg/proxy/cachepool"
 
 	"github.com/juju/errors"
 	stats "github.com/ngaut/gostats"
@@ -212,7 +212,12 @@ func (s *Server) redisTunnel(c *session) error {
 	k := keys[0]
 
 	opstr := strings.ToUpper(string(op))
-	//log.Debugf("op: %s, %s", opstr, keys[0])
+
+	if opstr == "EVAL" || opstr == "EVALSHA"{
+		k = keys[2]
+	}
+
+	//log.Debugf("op: %s, %s", opstr, k)
 	next, err := s.filter(opstr, keys, c)
 	if err != nil {
 		return errors.Trace(err)

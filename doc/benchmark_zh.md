@@ -19,7 +19,7 @@
 
 + Software
 
-    - [Codis 8dc6b66](https://github.com/wandoulabs/codis/commit/886d84f0b3da45b20a085e79f6fbb35384ad0172)
+    - [Codis 8dc6b66](https://github.com/hmaimi/codis/commit/886d84f0b3da45b20a085e79f6fbb35384ad0172)
     
         * 16 x Codis Redis
             

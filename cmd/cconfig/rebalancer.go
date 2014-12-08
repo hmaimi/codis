@@ -11,8 +11,8 @@ import (
 	log "github.com/ngaut/logging"
 	"github.com/ngaut/zkhelper"
 	"github.com/nu7hatch/gouuid"
-	"github.com/wandoulabs/codis/pkg/models"
-	"github.com/wandoulabs/codis/pkg/utils"
+	"github.com/hmaimi/codis/pkg/models"
+	"github.com/hmaimi/codis/pkg/utils"
 )
 
 type NodeInfo struct {

@@ -21,7 +21,7 @@ Codis is production-ready and is widely used by [wandoujia.com](http://wandoujia
 ## Build and Install
 
 * Install go & ZooKeeper
-* go get github.com/wandoulabs/codis
+* go get github.com/hmaimi/codis
 * cd codis
 * ./bootstrap.sh
 * make gotest
@@ -30,17 +30,17 @@ Codis is production-ready and is widely used by [wandoujia.com](http://wandoujia
 
 ## Tutorial
 
-[简体中文](https://github.com/wandoulabs/codis/blob/master/doc/tutorial_zh.md)  
-[English](https://github.com/wandoulabs/codis/blob/master/doc/tutorial_en.md)
+[简体中文](https://github.com/hmaimi/codis/blob/master/doc/tutorial_zh.md)  
+[English](https://github.com/hmaimi/codis/blob/master/doc/tutorial_en.md)
 
 ## FAQ
 
-[简体中文](https://github.com/wandoulabs/codis/blob/master/doc/FAQ_zh.md)  
-[English (WIP) ](https://github.com/wandoulabs/codis/blob/master/doc/FAQ_en.md)
+[简体中文](https://github.com/hmaimi/codis/blob/master/doc/FAQ_zh.md)  
+[English (WIP) ](https://github.com/hmaimi/codis/blob/master/doc/FAQ_en.md)
 
 ## Performance (Benchmark)
 
-[简体中文](https://github.com/wandoulabs/codis/blob/master/doc/benchmark_zh.md)  
+[简体中文](https://github.com/hmaimi/codis/blob/master/doc/benchmark_zh.md)  
 English (WIP)
 
 ## Architecture

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/ngaut/zkhelper"
-	"github.com/wandoulabs/codis/pkg/models"
+	"github.com/hmaimi/codis/pkg/models"
 
 	"sync/atomic"
 

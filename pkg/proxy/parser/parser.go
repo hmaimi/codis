@@ -54,6 +54,8 @@ func init() {
 		keyFun[v] = thridAsKey
 	}
 
+	keyFun["SCRIPT LOAD"] = noKey 
+	
 	cnt := 10000
 	intBuffer = make([][]byte, cnt)
 	for i := 0; i < cnt; i++ {
@@ -299,6 +301,10 @@ func thridAsKey(r *Resp) ([][]byte, error) {
 	}
 
 	return keys, nil
+}
+
+func noKey(r *Resp)([][]byte,error){
+	return [][]byte{[]byte("noKey")}, nil
 }
 
 func (r *Resp) getBulkBuf() []byte {

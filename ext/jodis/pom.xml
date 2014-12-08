@@ -22,17 +22,17 @@ THE SOFTWARE.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.wandoulabs.jodis</groupId>
+    <groupId>com.hmaimi.jodis</groupId>
     <artifactId>jodis</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
     <description>Round Robin jedis pool for codis</description>
-    <url>https://github.com/wandoulabs/codis</url>
+    <url>https://github.com/hmaimi/codis</url>
     <scm>
-        <connection>scm:git:ssh://github.com:wandoulabs/codis.git</connection>
-        <developerConnection>scm:git:ssh://github.com:wandoulabs/codis.git</developerConnection>
-        <url>ssh://github.com:wandoulabs/codis.git</url>
+        <connection>scm:git:ssh://github.com:hmaimi/codis.git</connection>
+        <developerConnection>scm:git:ssh://github.com:hmaimi/codis.git</developerConnection>
+        <url>ssh://github.com:hmaimi/codis.git</url>
         <tag>HEAD</tag>
     </scm>
     <properties>

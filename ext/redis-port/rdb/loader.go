@@ -13,7 +13,7 @@ import (
 )
 
 import (
-	"github.com/wandoulabs/codis/ext/redis-port/rdb/digest"
+	"github.com/hmaimi/codis/ext/redis-port/rdb/digest"
 )
 
 type Loader struct {

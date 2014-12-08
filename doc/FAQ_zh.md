@@ -66,7 +66,7 @@ CAS 暂时不支持, 但是如果非得支持, 我们可以考虑. Lua 脚本考
 
 ###Codis 的代码在哪? 是开源的吗?
 
-是的, Codis 现在是豌豆荚的开源项目, 在 Github 上, Licence 是 MIT, 地址是:　https://github.com/wandoulabs/codis
+是的, Codis 现在是豌豆荚的开源项目, 在 Github 上, Licence 是 MIT, 地址是:　https://github.com/hmaimi/codis
 
 
 ###你们如何保证数据迁移的过程中多个 Proxy 不会读到老的数据 (迁移的原子性) ? 
@@ -75,7 +75,7 @@ CAS 暂时不支持, 但是如果非得支持, 我们可以考虑. Lua 脚本考
 
 ###现有redis集群上有上T的数据，如何迁移到Codis上来？
 
-为了提高 Codis 推广和部署上的效率，我们为数据迁移提供了一个叫做 [redis-port](https://github.com/wandoulabs/codis/tree/master/ext/redis-port) 的命令行工具，它能够：
+为了提高 Codis 推广和部署上的效率，我们为数据迁移提供了一个叫做 [redis-port](https://github.com/hmaimi/codis/tree/master/ext/redis-port) 的命令行工具，它能够：
 
 + 静态分析 RDB 文件，包括解析以及恢复 RDB 数据到 redis
 + 从 redis 上 dump RDB 文件以及从 redis 和 codis 之间动态同步数据
@@ -106,7 +106,7 @@ CAS 暂时不支持, 但是如果非得支持, 我们可以考虑. Lua 脚本考
 + redis-port 本质是以 slave 的形式挂载到现有 redis 服务上去的
 
 	1. redis 会生成 RDB DUMP 文件给作为 slave 的 redis-port
-	2. redis-port 分析 RDB 文件，并拆分成 key-value 对，通过 [slotsrestore](https://github.com/wandoulabs/codis/blob/master/doc/redis_change_zh.md#slotsrestore-key1-ttl1-val1-key2-ttl2-val2-) 指令发给 codis
+	2. redis-port 分析 RDB 文件，并拆分成 key-value 对，通过 [slotsrestore](https://github.com/hmaimi/codis/blob/master/doc/redis_change_zh.md#slotsrestore-key1-ttl1-val1-key2-ttl2-val2-) 指令发给 codis
 	3. 迁移过程中发生的修改，redis 会将这些指令在 RDB DUMP 发送完成后，再发给 redis-port，而 redis-port 收到这些指令后不作处理，而直接转发给 Codis
 	
 + redis-port 处理还是很快的，参考：
